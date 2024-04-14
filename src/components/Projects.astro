@@ -9,6 +9,7 @@ import React from "./icons/React.astro"
 import Typescript from "./icons/Typescript.astro"
 import Wordpress from "./icons/Wordpress.astro"
 import Php from "./icons/Php.astro"
+import Bootstrap from "./icons/Bootstrap.astro"
 
 const TAGS = {
   NEXT: {
@@ -33,7 +34,7 @@ const TAGS = {
   },
   PHP: {
     name: "PHP",
-    class: "bg-[#8993be] text-white",
+    class: "bg-[#8993be] text-black",
     icon: Php,
   },
   TYPESCRIPT: {
@@ -46,6 +47,11 @@ const TAGS = {
     class: "bg-[#1e3a4d] text-white",
     icon: Wordpress,
   },
+  BOOTSTRAP: {
+    name: "Bootstrap",
+    class: "bg-[#aa98ff] text-black",
+    icon: Bootstrap,
+  },
 }
 const PROJECTS = [
   {
@@ -53,17 +59,17 @@ const PROJECTS = [
     description:
       "At TechnoAyuda, we're passionate about helping businesses thrive in the ever-evolving digital landscape. We offer a comprehensive suite of IT consulting services designed to elevate your online presence, streamline operations, and unleash your full potential.",
     link: "https://technoayuda.com",
-    image: "/projects/technoayuda.jpg",
+    image: "/projects/technoayuda.webp",
     tags: [TAGS.PHP, TAGS.JAVASCRIPT,TAGS.TAILWIND],
     github:''
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "GUSGERAS - FOOD LOCAL DIRECTORY",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "I launched gusgeras.com during the COVID-19 pandemic to help local businesses in my city gain a stronger online presence. This initiative supports businesses that may not have the resources to establish themselves effectively on the internet.",
+    link: "https://gusgeras.com",
+    image: "/projects/gusgeras.webp",
+    tags: [TAGS.PHP, TAGS.JAVASCRIPT, TAGS.BOOTSTRAP],
   },
 ]
 ---
@@ -74,7 +80,7 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img alt={title} class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>
 
@@ -106,7 +112,7 @@ const PROJECTS = [
             </LinkButton>
           )}
           {link && (
-            <LinkButton href={link}>
+            <LinkButton href={link} target="_blank">
               <Link class="size-4" />
               Preview
             </LinkButton>
