@@ -1,5 +1,6 @@
 {
   "name": "portfolio-dev",
+  "home": "/portfolio/",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
