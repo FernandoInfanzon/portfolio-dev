@@ -1,0 +1,38 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Jan 2024 - Currently",
+    title: "Web Developer (Freelance)",
+    company: "Techno Ayuda",
+    description:
+      "Specialist in creating and enhancing the visual and functional aspects of websites and applications, collaborating with designers and content producers, conducting thorough software testing, writing, modifying, and debugging code, and developing optimization strategies to improve project efficiency and usability.I specialized in creating and enhancing the visual and functional aspects of websites and applications, collaborating with designers and content producers, conducting thorough software testing, writing, modifying, and debugging code, and developing optimization strategies to improve project efficiency and usability.",
+  },
+  {
+    date: "Oct 21 - Nov 23",
+    title: "Web Developer",
+    company: "Wizeline",
+    description:
+      "As a key member of the Marketing team, the Web Developer is in charge of ensuring Wizeline’s websites (wizeline.com and academy.wizeline.com) look good, function properly, and support the company’s business goals. The role will collaborate closely with Web Developers/Engineers, UX/UI Designers, the Academy team, the talent team, the Security team and Marketing team members to develop new landing pages and web experiences, fix bugs, and improve the website based on the latest data/feedback.",
+    link: "https://www.linkedin.com/in/luisinfanzonm/#:~:text=Experience-,WEB%20DEVELOPER,-WEB%20DEVELOPER",
+  },
+  {
+    date: "Jan 19 - Oct 21",
+    title: "Webmaster",
+    company: "Thy Collection",
+    description:
+      "As a Web Master at Thy Collection, I was entrusted with the management and enhancement of 20 diverse websites. This role demanded a high level of organization, technical proficiency, and an eye for detail. I successfully led the migration of these websites to the latest technologies, focusing on creating dynamic, database-connected websites that offered enriched interactivity and functionality. ",
+    link: "https://www.linkedin.com/in/luisinfanzonm/#:~:text=and%20%2B23%20skills-,WEBMASTER,-WEBMASTER",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
